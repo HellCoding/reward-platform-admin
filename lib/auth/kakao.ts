@@ -1,7 +1,7 @@
 // 카카오 로그인 관련 유틸리티 함수
 import { mockKakaoLogin } from "./mock-auth";
 import { api } from "../../services/api";
-import { getEnv, debugEnvironment } from "../utils/env";
+import { getEnv } from "../utils/env";
 
 // 테스트 모드 설정
 const TEST_MODE = false; // 실제 백엔드 연동으로 변경
@@ -66,9 +66,6 @@ export const getKakaoAuthUrl = () => {
   
   // 환경변수보다 동적 생성을 우선시 -> SSM 파라미터 우선으로 변경
   const redirectUri = getDefaultRedirectUri();
-  
-  // 환경변수 디버그 정보 출력
-  debugEnvironment();
   
   console.log('🔍 Debug Kakao Auth:', {
     clientId: kakaoClientId ? (kakaoClientId.length > 10 ? 'exists' : 'missing') : 'missing',

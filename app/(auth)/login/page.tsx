@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "@/contexts/auth-context";
 import { getKakaoAuthUrl } from "@/lib/auth/kakao";
-import { initializeEnvironment } from "@/lib/utils/env";
 import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
@@ -12,9 +11,6 @@ export default function LoginPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // 환경변수 초기화 및 디버그 정보 출력
-    initializeEnvironment();
-    
     // 카카오 로그인 URL 설정 (한 번만)
     if (!kakaoAuthUrl) {
       setKakaoAuthUrl(getKakaoAuthUrl());

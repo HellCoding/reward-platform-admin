@@ -10,6 +10,16 @@
 [reward-platform-api](https://github.com/HellCoding/reward-platform-api) 백엔드와 연동하여
 사용자, 게임, 포인트, 티켓, 광고, 푸시 알림 등을 관리합니다.
 
+## Screenshots
+
+| Login (Dark Theme) | User Management |
+|:---:|:---:|
+| ![Login](docs/screenshots/01-login.png) | ![Users](docs/screenshots/03-users.png) |
+
+| Game Action Management | Dark Mode |
+|:---:|:---:|
+| ![Actions](docs/screenshots/04-actions.png) | ![Dark Mode](docs/screenshots/06-dark-mode.png) |
+
 ## Why This Project?
 
 | 요구사항 | 구현 |
