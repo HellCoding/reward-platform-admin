@@ -1,0 +1,39 @@
+direction: right
+
+frontend: "Admin Dashboard (Next.js 15)" {
+  style.fill: "#0f3460"
+  style.font-color: "#ffffff"
+
+  app: "App Router" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  rq: "TanStack Query\nServer State + Cache" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  auth: "Auth Context\nKakao OAuth + JWT" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  ui: "Radix UI + Tailwind\nComponent Library" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+}
+
+pages: "Feature Pages (13+)" {
+  style.fill: "#16213e"
+  style.font-color: "#ffffff"
+
+  report: "Reports\n일일 운영 리포트" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  user: "Users\n회원 관리" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  action: "Actions\n8종 게임 관리" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  ticket: "Tickets\n티켓 발급/조회" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  point: "Points\n포인트 관리" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  box: "Boxes\n랜덤박스 설정" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  draw: "Draws\n확률 관리" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+  push: "Push\n푸시 알림" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+}
+
+backend: "API Server" {
+  style.fill: "#0a3d62"
+  style.font-color: "#ffffff"
+
+  api: "reward-platform-api\nSpring Boot 3.x" {style.fill: "#1a1a2e"; style.font-color: "#ffffff"}
+}
+
+frontend.app -> frontend.rq {style.stroke: "#53bf9d"}
+frontend.app -> frontend.auth {style.stroke: "#53bf9d"}
+frontend.app -> frontend.ui {style.stroke: "#53bf9d"}
+frontend.rq -> pages {style.stroke: "#e94560"}
+pages -> backend.api {style.stroke: "#e94560"}
+frontend.auth -> backend.api {style.stroke: "#e94560"}

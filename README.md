@@ -33,37 +33,7 @@
 
 ## Architecture
 
-```mermaid
-graph TB
-    subgraph Frontend["Admin Dashboard (Next.js 15)"]
-        APP["App Router"]
-        RQ["TanStack Query<br/>Server State + Cache"]
-        AUTH["Auth Context<br/>Kakao OAuth + JWT"]
-        UI["Radix UI + Tailwind<br/>Component Library"]
-    end
-
-    subgraph Pages["Feature Pages (13+)"]
-        REPORT["Reports<br/>일일 운영 리포트"]
-        USER["Users<br/>회원 관리"]
-        ACTION["Actions<br/>8종 게임 관리"]
-        TICKET["Tickets<br/>티켓 발급/조회"]
-        POINT["Points<br/>포인트 관리"]
-        BOX["Boxes<br/>랜덤박스 설정"]
-        DRAW["Draws<br/>확률 관리"]
-        PUSH["Push<br/>푸시 알림"]
-    end
-
-    subgraph Backend["API Server"]
-        API["reward-platform-api<br/>Spring Boot 3.x"]
-    end
-
-    APP --> RQ
-    APP --> AUTH
-    APP --> UI
-    RQ --> Pages
-    Pages --> API
-    AUTH --> API
-```
+![Architecture](docs/images/architecture.png)
 
 ## Key Features
 
